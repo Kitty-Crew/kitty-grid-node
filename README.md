@@ -1,4 +1,6 @@
-## Furality Grid Node
+## Kitty Grid Node
+> [!NOTE]  
+> This is a fork of Furality-Grid-Node!
 
 A gridnode generator for sending DMX control over video. Used in Furality worlds and other projects. It's meant to be very direct and lightweight, with features and formats only added as-needed. If you are looking for something more modular, check out [hnode](https://github.com/Happyrobot33/HNode).
 
