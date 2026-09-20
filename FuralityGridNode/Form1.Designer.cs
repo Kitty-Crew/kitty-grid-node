@@ -66,9 +66,11 @@ namespace FuralityGridNode
             this.button1 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.expandScreenshotTo16by9 = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label4 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -135,7 +137,7 @@ namespace FuralityGridNode
             // res1440p
             // 
             this.res1440p.AutoSize = true;
-            this.res1440p.Location = new System.Drawing.Point(196, 64);
+            this.res1440p.Location = new System.Drawing.Point(196, 65);
             this.res1440p.Name = "res1440p";
             this.res1440p.Size = new System.Drawing.Size(80, 24);
             this.res1440p.TabIndex = 18;
@@ -166,7 +168,7 @@ namespace FuralityGridNode
             // largeCRC
             // 
             this.largeCRC.AutoSize = true;
-            this.largeCRC.Location = new System.Drawing.Point(196, 96);
+            this.largeCRC.Location = new System.Drawing.Point(196, 95);
             this.largeCRC.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.largeCRC.Name = "largeCRC";
             this.largeCRC.Size = new System.Drawing.Size(104, 24);
@@ -394,7 +396,7 @@ namespace FuralityGridNode
             // 
             // midiConnect
             // 
-            this.midiConnect.Location = new System.Drawing.Point(243, 27);
+            this.midiConnect.Location = new System.Drawing.Point(243, 28);
             this.midiConnect.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.midiConnect.Name = "midiConnect";
             this.midiConnect.Size = new System.Drawing.Size(88, 35);
@@ -416,7 +418,7 @@ namespace FuralityGridNode
             // midiStatus
             // 
             this.midiStatus.AutoSize = true;
-            this.midiStatus.Location = new System.Drawing.Point(139, 328);
+            this.midiStatus.Location = new System.Drawing.Point(140, 328);
             this.midiStatus.Name = "midiStatus";
             this.midiStatus.Size = new System.Drawing.Size(56, 20);
             this.midiStatus.TabIndex = 11;
@@ -441,11 +443,13 @@ namespace FuralityGridNode
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1733, 392);
+            this.tabControl1.Size = new System.Drawing.Size(1732, 392);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button2);
+            this.tabPage1.Controls.Add(this.expandScreenshotTo16by9);
             this.tabPage1.Controls.Add(this.gridPreview);
             this.tabPage1.Controls.Add(this.midiStatus);
             this.tabPage1.Controls.Add(this.groupBox1);
@@ -458,10 +462,20 @@ namespace FuralityGridNode
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tabPage1.Size = new System.Drawing.Size(1725, 359);
+            this.tabPage1.Size = new System.Drawing.Size(1724, 359);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Main";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // expandScreenshotTo16by9
+            // 
+            this.expandScreenshotTo16by9.AutoSize = true;
+            this.expandScreenshotTo16by9.Location = new System.Drawing.Point(1233, 301);
+            this.expandScreenshotTo16by9.Name = "expandScreenshotTo16by9";
+            this.expandScreenshotTo16by9.Size = new System.Drawing.Size(236, 24);
+            this.expandScreenshotTo16by9.TabIndex = 19;
+            this.expandScreenshotTo16by9.Text = "Expand Screenshots to 16:9";
+            this.expandScreenshotTo16by9.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -480,7 +494,7 @@ namespace FuralityGridNode
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1725, 359);
+            this.tabPage2.Size = new System.Drawing.Size(1724, 359);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "creature??";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -495,11 +509,21 @@ namespace FuralityGridNode
             this.label4.TabIndex = 15;
             this.label4.Text = "creature!!";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(1080, 295);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(138, 36);
+            this.button2.TabIndex = 20;
+            this.button2.Text = "Clear Buffer";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1745, 397);
+            this.ClientSize = new System.Drawing.Size(1744, 397);
             this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.tabControl1);
             this.DoubleBuffered = true;
@@ -568,6 +592,8 @@ namespace FuralityGridNode
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox bigDataCheck;
         private System.Windows.Forms.CheckBox res1440p;
+    private System.Windows.Forms.CheckBox expandScreenshotTo16by9;
+        private System.Windows.Forms.Button button2;
     }
 }
 
